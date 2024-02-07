@@ -36,8 +36,8 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-gray-200  h-[100vh]">
-      <div className="height-[100vh] flex flex-col lg:flex-row justify-around lg:justify-center">
+    <div className="bg-gray-200 m-0 p-0 relative">
+      <div className="height-[100vh] flex flex-col lg:flex-row justify-around lg:justify-center relative">
         <div className="bg-[#605BFF] h-[10vh]  flex items-center pl-[20px] font-nunito lg:hidden">
           <img
             src="/icons/app_logo.png"
@@ -46,6 +46,8 @@ const Login = () => {
           />
           <p className="text-[20px] text-white ml-[20px]">Base</p>
         </div>
+        <div className="colored-style lg:bock hidden lg:w-[30vw] h-[105vh] bg-white lg:block  overflow-hidden absolute rotate-[8deg] left-[43%] z-10 "></div>
+
         <div className="lg:w-[50%] bg-[#605BFF] hidden lg:block">
           <img
             src="/icons/app_logo.png"
@@ -78,7 +80,7 @@ const Login = () => {
             />
           </div>
         </div>
-        <div className="h-[100%] px-[5%] lg:bg-white lg:h-[100vh] lg:w-[50vw] lg:px-[12%] py-[7%]">
+        <div className="h-[100%] px-[5%] lg:bg-white lg:h-[100vh] lg:w-[50vw] lg:px-[5%] py-[7%] z-10">
           <div className="">
             <p className="text-[24px] font-[700] mt-[8%]">Sign In</p>
             <p className="text-[14px] pt-[8px]">Sign in to your account</p>
@@ -165,7 +167,7 @@ const Login = () => {
             </form>
           </div>
 
-          <div className="lg:flex items-center">
+          <div className="lg:flex items-center justify-center">
             <p className="text-center mt-[25px] lg:mt-0 lg:pr-[10px] text-[20px] text-[#858585] font-lato">
               Don't have an account?
             </p>
