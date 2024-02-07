@@ -10,7 +10,6 @@ const Login = () => {
   // const
 
   const handleSubmit = async (e) => {
-    // const set
     e.preventDefault();
     try {
       const result = await signInWithPopup(auth, googleProvider);
@@ -37,9 +36,9 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-gray-200  h-[100vh] w-[100vw]">
+    <div className="bg-gray-200  h-[100vh]">
       <div className="height-[100vh] flex flex-col lg:flex-row justify-around lg:justify-center">
-        <div className="bg-[#605BFF] h-[10vh] w-[100vw] flex items-center pl-[20px] font-nunito lg:hidden">
+        <div className="bg-[#605BFF] h-[10vh]  flex items-center pl-[20px] font-nunito lg:hidden">
           <img
             src="/icons/app_logo.png"
             alt="App Icon"
@@ -79,7 +78,7 @@ const Login = () => {
             />
           </div>
         </div>
-        <div className="h-[100%] px-[5%] lg:bg-white lg:h-[100vh] lg:w-[50vw] lg:px-[15%] py-[7%]">
+        <div className="h-[100%] px-[5%] lg:bg-white lg:h-[100vh] lg:w-[50vw] lg:px-[12%] py-[7%]">
           <div className="">
             <p className="text-[24px] font-[700] mt-[8%]">Sign In</p>
             <p className="text-[14px] pt-[8px]">Sign in to your account</p>
@@ -87,7 +86,7 @@ const Login = () => {
           <div className="flex justify-between items-center mt-[30px]">
             <button
               type="button"
-              className="text-[#858585] text-[10px] w-[45%]  rounded-lg bg-white hover:bg-[#white]/90  focus:outline-none focus:ring-[#3b5998]/50 px-3 py-2.5 text-center inline-flex items-center mb-2"
+              className="text-[#858585] text-[10px] w-[45%]  rounded-lg bg-white hover:bg-[#white]/90  focus:outline-none focus:ring-[#3b5998]/50 px-3 py-2.5 text-center inline-flex items-center mb-2 lg:text-[14px]"
               onClick={handleGoogleLogin}
             >
               <img
@@ -99,7 +98,7 @@ const Login = () => {
             </button>
             <button
               type="button"
-              className="text-[#858585] text-[10px] w-[45%] bg-white hover:bg-[#white]/90 focus:ring-4 focus:outline-none  rounded-lg px-3 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mb-2"
+              className="text-[#858585] text-[10px] w-[45%] bg-white hover:bg-[#white]/90 focus:ring-4 focus:outline-none  rounded-lg px-3 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mb-2 lg:text-[14px]"
             >
               <img
                 src="/icons/apple-icon.png"

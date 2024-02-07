@@ -16,4 +16,15 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
+
+
+const redirectURIs = [
+  "https://base-app-rohit.vercel.app/auth/callback",
+  "http://localhost:3000/auth/callback",
+];
+
+googleProvider.setCustomParameters({
+  redirect_uri: redirectURIs,
+});
+
 export { auth, googleProvider };
