@@ -1,26 +1,22 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../firebase/config";
 import { AuthContext } from "../context/authContext";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const { setUserData } = useContext(AuthContext);
   // const
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const result = await signInWithPopup(auth, googleProvider);
-      const user = result.user;
-      setUserData(user.providerData[0]);
+    if (email == "admin" && password == "admin") {
+      setUserData({ email: email });
       navigate("/");
-    } catch (error) {
-      console.error("error: ", error);
     }
-
-    navigate("/");
   };
 
   const handleGoogleLogin = async (e) => {
@@ -119,6 +115,8 @@ const Login = () => {
               <input
                 type="text"
                 placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="   
                         mt-[10px]
                         mb-[20px]
@@ -142,6 +140,8 @@ const Login = () => {
               <input
                 type="password"
                 placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 className="
               mt-[10px]
                         w-full

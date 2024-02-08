@@ -27,7 +27,7 @@ const NavBar = ({ setIsSideBarOpen }) => {
       <div className="flex items-center">
         <IoMdNotificationsOutline className="w-[25px] h-[25px] mr-[10px]" />
         <img
-          src={`${user.photoURL}`}
+          src={ user.photoURL ? user.photoURL : "/icons/user-icon.png" }
           alt="Profile Image"
           className="w-[30px] h-[30px] rounded-[50%]"
         />
