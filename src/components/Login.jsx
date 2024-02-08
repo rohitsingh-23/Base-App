@@ -168,7 +168,7 @@ const Login = () => {
               </form>
             </div>
 
-            <div className="lg:flex items-center justify-center">
+            <div className="lg:flex items-center justify-center mt-[30px]">
               <p className="text-center mt-[25px] lg:mt-0 lg:pr-[10px] text-[20px] text-[#858585] font-lato">
                 Don't have an account?
               </p>
