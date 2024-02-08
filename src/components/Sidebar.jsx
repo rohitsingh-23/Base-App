@@ -1,9 +1,9 @@
 import React from "react";
 import { IoMdClose } from "react-icons/io";
 
-const Sidebar = ({ setIsSideBarOpen, mobile= true }) => {
+const Sidebar = ({ setIsSideBarOpen, mobile = true }) => {
   return (
-    <div className="rounded-tr-[25px] rounded-br-[25px] h-[100vh] bg-white z-11">
+    <div className="rounded-tr-[25px] w-[20vw] max-w-[250px] rounded-br-[25px] h-[100vh] bg-white z-11">
       <div className="flex items-center justify-between py-[15px] px-[30px]">
         <div className="flex items-center">
           <img
@@ -20,7 +20,7 @@ const Sidebar = ({ setIsSideBarOpen, mobile= true }) => {
             className="h-[20px] pr-[10px] lg:hidden"
             onClick={() => {
               setIsSideBarOpen((prev) => {
-                return !prev
+                return !prev;
               });
             }}
           />

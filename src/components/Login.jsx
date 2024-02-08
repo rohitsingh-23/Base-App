@@ -13,7 +13,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email == "admin" && password == "admin") {
+    if (email == "admin@admin.com" && password == "admin") {
       setUserData({ email: email });
       navigate("/");
     }
@@ -114,7 +114,7 @@ const Login = () => {
                 </label>
                 <br />
                 <input
-                  type="text"
+                  type="email"
                   placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
